@@ -6,7 +6,7 @@ public class LinkedList<T> {
 	private Node<T> ultimo = null;
 	private int size;
 
-	public void adiconaNocomeco(T obj) {
+	public void adicionaNocomeco(T obj) {
 
 		if (this.size == 0) {
 			Node nova = new Node(obj);
@@ -23,7 +23,7 @@ public class LinkedList<T> {
 	public void adiciona(T obj) {
 
 		if (this.size == 0) {
-			adiconaNocomeco(obj);
+			adicionaNocomeco(obj);
 			return;
 		}
 		Node cel = new Node(obj);
@@ -41,7 +41,7 @@ public class LinkedList<T> {
 		Node ant = atual;
 
 		if (posicao == 1) {
-			adiconaNocomeco(elementes);
+			adicionaNocomeco(elementes);
 			return;
 		}
 
@@ -233,7 +233,6 @@ public class LinkedList<T> {
 			for(int j=i+1; j<this.size;j++) {
 				int value = entity[i].toString().toLowerCase()
 						.compareTo(entity[j].toString().toLowerCase());
-				System.out.println(value);
 				if(entity[i].toString().toLowerCase()
 						.compareTo(entity[j].toString().toLowerCase())>0) {
 					T aux =entity[j];
